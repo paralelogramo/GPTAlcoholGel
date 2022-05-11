@@ -11,7 +11,7 @@
 .boxImage{
     background-image: url('../../../assets/envio_correcto.png');
     background-repeat: no-repeat;
-    background-size: 60% auto;
+    background-size: auto 60%;
     background-position: center;
     min-height: 90%;
     width: 100%;
@@ -21,7 +21,7 @@
 .boxImageFail{
     background-image: url('../../../assets/envio_erroneo.png');
     background-repeat: no-repeat;
-    background-size: 60% auto;
+    background-size: auto 60%;
     background-position: center;
     min-height: 90%;
     width: 100%;

@@ -7,11 +7,12 @@ import { Notification } from '../objects/notification';
 })
 export class NotificationServiceService {
 
-  baseUrl = "Url del localhost del pino";
+  baseUrl = "http://localhost";
 
   constructor( private clientHttp: HttpClient) { }
 
   postNotification(notification: Notification){
-    return this.clientHttp.post<any>(`${this.baseUrl}`,notification)
+    console.log(notification)
+    return this.clientHttp.post<any>(`${this.baseUrl}/sendNotif.php`,notification)
   }
 }

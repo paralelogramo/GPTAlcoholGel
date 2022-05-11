@@ -6,21 +6,28 @@ import { AppComponent } from './app.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { Error404Component } from './components/error404/error404.component';
+import { NotificationServiceService } from './services/notification-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotificationComponent
+    NotificationComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    NotificationServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
