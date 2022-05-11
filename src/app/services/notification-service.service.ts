@@ -12,7 +12,6 @@ export class NotificationServiceService {
   constructor( private clientHttp: HttpClient) { }
 
   postNotification(notification: Notification){
-    console.log(notification)
     return this.clientHttp.post<any>(`${this.baseUrl}/sendNotif.php`,notification)
   }
 }
