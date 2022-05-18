@@ -1,0 +1,30 @@
+<div class="root">
+    <div *ngIf="sent;else fail" class="background">
+        <mat-grid-list cols="1" rowHeight="50vh">
+            <mat-grid-tile>
+                <div class="boxImage">
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="boxText">
+                    <p class="text">Notificación enviado con éxito</p>
+                </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+    </div>
+    <ng-template #fail>
+        <div class="backgroundFail">
+            <mat-grid-list cols="1" rowHeight="50vh">
+                <mat-grid-tile>
+                    <div class="boxImageFail">
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="boxTextFail">
+                        <p class="text">Error al enviar la notificación</p>
+                    </div>
+                </mat-grid-tile>
+              </mat-grid-list>
+        </div>
+    </ng-template>
+</div>
