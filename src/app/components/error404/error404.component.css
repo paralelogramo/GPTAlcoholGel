@@ -1,0 +1,9 @@
+.background{
+    background-image: url("../../../assets/error-404.jpg");
+    background-repeat: no-repeat;
+    background-color: #FFBC01;
+    background-size: 80%;
+    background-position: center;
+    height: 100%;
+    width: auto;
+}
