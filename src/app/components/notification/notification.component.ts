@@ -20,7 +20,11 @@ export class NotificationComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.notificationService.postNotification(new Notification(this.route.snapshot.params['room'])).subscribe((confirm:any) => {
+      console.log(confirm)
       this.sent = confirm.resultado;
+    },
+    error =>{
+      this.sent = error.ok
     })
   }
 

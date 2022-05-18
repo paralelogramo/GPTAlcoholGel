@@ -6,7 +6,7 @@ import { NotificationComponent } from './components/notification/notification.co
 const routes: Routes = [
   { path: 'notification/:room', component: NotificationComponent },
   { path: 'error404', component: Error404Component },
-  //{ path: '**', redirectTo: '/error404'},
+  { path: '**', redirectTo: '/error404'},
 ];
 
 @NgModule({
