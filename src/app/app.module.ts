@@ -9,6 +9,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { Error404Component } from './components/error404/error404.component';
 import { NotificationServiceService } from './services/notification-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     NotificationComponent,
-    Error404Component
+    Error404Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
