@@ -1,0 +1,19 @@
+<div class="background">
+    <mat-grid-list cols="2" rowHeight="20vh" class="grid">
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <button mat-button>Basic</button>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <button mat-stroked-button color="primary">Deterioro</button>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="example-full-width textarea" appearance="fill">
+                <mat-label>Deja un comentario</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+              </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <button mat-stroked-button color="primary">Enviar Notificacion</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
