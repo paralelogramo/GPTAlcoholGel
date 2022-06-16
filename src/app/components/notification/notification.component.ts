@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router'
 export class NotificationComponent implements OnInit, OnDestroy {
 
   sent: boolean = true;
+  loading: boolean = true;
 
   constructor(
     private notificationService: NotificationServiceService,
@@ -19,9 +20,9 @@ export class NotificationComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.notificationService.postNotification(new Notification(this.route.snapshot.params['room'])).subscribe((confirm:any) => {
-      console.log(confirm)
-      this.sent = confirm.resultado;
+    this.notificationService.postNotification(this.route.snapshot.params['room']).subscribe((confirm:any) => {
+      this.sent = confirm.confirm;
+      this.loading = false;
     },
     error =>{
       this.sent = error.ok
