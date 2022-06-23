@@ -9,7 +9,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { Error404Component } from './components/error404/error404.component';
 import { NotificationServiceService } from './services/notification-service.service';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
+import { NotificationHomeComponent } from './components/notification-home/notification-home.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -18,14 +20,16 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     NotificationComponent,
     Error404Component,
-    LoginComponent
+    NotificationHomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [
     NotificationServiceService
