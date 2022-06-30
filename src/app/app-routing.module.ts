@@ -6,8 +6,8 @@ import { NotificationComponent } from './components/notification/notification.co
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: 'notification', component: NotificationHomeComponent },
-  { path: 'notification/:room', component: NotificationComponent },
+  { path: 'success', component: NotificationComponent },
+  { path: 'notification/:room', component: NotificationHomeComponent },
   { path: 'error404', component: Error404Component },
   { path: '**', redirectTo: '/login'},
   { path: 'login', component: LoginComponent}

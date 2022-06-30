@@ -11,14 +11,14 @@ export class NotificationServiceService {
 
   constructor( private clientHttp: HttpClient) { }
 
-  postNotification(cdf: string, ctf: string, id:number){
+  postNotification(room: string, action: string, comment: string){
     let headers = new HttpHeaders({ "content-type": 'application/x-www-form-urlencoded' });
     headers.append('Access-Control-Allow-Origin', "*");
     let body = new URLSearchParams();
-    body.set('cdf',cdf);
-    body.set('ctf', ctf);
-    body.set('id', ''+id);
-    return this.clientHttp.post<any>(`http://alcoholgel.sytes.net:3000/sendNotification`,body.toString(), {headers: headers})
+    body.set('room',room);
+    body.set('action', action);
+    body.set('comment', comment);
+    return this.clientHttp.post<any>(`http://alcoholgel.sytes.net:3000/sendNotification`,body.toString() , {headers: headers})
   }
 
   getIdRoom(room: string){

@@ -12,8 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotificationHomeComponent } from './components/notification-home/notification-home.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,8 @@ import { MatInputModule } from '@angular/material/input';
     MatGridListModule,
     HttpClientModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [
     NotificationServiceService
