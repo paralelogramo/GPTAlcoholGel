@@ -11,27 +11,10 @@ import { formatDate } from '@angular/common';
 })
 export class NotificationComponent implements OnInit, OnDestroy {
 
-  sent: boolean = true;
-  loading: boolean = true;
-
-  constructor(
-    private notificationService: NotificationServiceService,
-    private route:ActivatedRoute
-  ) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    let room = this.route.snapshot.params['room'];
-    let currentDate = new Date();
-    let currentDateFormat = formatDate(currentDate, 'dd/MM/yyyy', 'en-US');
-    let currentTime = new Date();
-    let currentTimeFormat = formatDate(currentTime, 'hh:mm:ss', 'en-US');
-
-    this.notificationService.getIdRoom(room).subscribe((id) => {
-      this.notificationService.postNotification(currentDateFormat, currentTimeFormat, Object.values(id)[0]).subscribe((confirm:any) => {
-        console.log(confirm.confirm)
-      })
-    })
   }
 
   ngOnDestroy(): void {
