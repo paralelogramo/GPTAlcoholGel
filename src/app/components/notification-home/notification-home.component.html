@@ -1,0 +1,23 @@
+<div class="background">
+    <form [formGroup]="form" (ngSubmit)="sendNotification()">
+        <mat-grid-list cols="2" rowHeight="20vh" class="grid">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <button *ngIf="type == 'A'" mat-raised-button color="primary" (click)="setAlcoholGel()">Alcohol Gel</button>
+                <button *ngIf="type == 'R'" mat-button color="primary" (click)="setAlcoholGel()">Alcohol Gel</button>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <button *ngIf="type == 'R'" mat-raised-button color="primary" (click)="setRepair()">Reparacion</button>
+                <button *ngIf="type == 'A'" mat-button color="primary" (click)="setRepair()">Reparacion</button>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                <mat-form-field class="example-full-width textarea" appearance="fill">
+                    <mat-label>Deja un comentario</mat-label>
+                    <textarea matInput placeholder="Ex. It makes me feel..." formControlName="comment"></textarea>
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                <button mat-stroked-button color="primary" type="submit">Enviar Notificacion</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</div>

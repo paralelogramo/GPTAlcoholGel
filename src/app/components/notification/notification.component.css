@@ -1,0 +1,51 @@
+.background{
+    background-color: #1C8ADB;
+    max-height: auto;
+}
+
+.backgroundFail{
+    background-color: #FFADAD;
+    max-height: auto;
+}
+
+.boxImage{
+    background-image: url('../../../assets/envio_correcto.png');
+    background-repeat: no-repeat;
+    background-size: auto 60%;
+    background-position: center;
+    min-height: 90%;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.boxImageFail{
+    background-image: url('../../../assets/envio_erroneo.png');
+    background-repeat: no-repeat;
+    background-size: auto 60%;
+    background-position: center;
+    min-height: 90%;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.boxText{
+    position: absolute;
+    top: 10%;
+    font-size: 47px;
+    line-height: 1;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.boxTextFail{
+    position: absolute;
+    top: 10%;
+    font-size: 47px;
+    line-height: 1;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.text{
+    color: #31373c;
+}
